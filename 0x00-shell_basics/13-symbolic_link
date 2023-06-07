@@ -1,2 +1,2 @@
 #!/bin/bash
-0;276;0ctouch __ls__ -> /bin/ls
+ln __ls__ -> /bin/ls
