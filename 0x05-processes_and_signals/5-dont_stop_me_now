@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# In the name of justice, you will be stopped
+
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
