@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Execute the outlaw
+pkill -f SIGKILL 7-highlander
