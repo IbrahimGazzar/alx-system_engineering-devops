@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# display pids with their corrsponding name
+
+pgrep -l bash
