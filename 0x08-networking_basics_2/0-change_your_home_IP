@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script modifies the resolved address for localhost and facebook
+touch hosts.new
+awk '/localhost/{print "127.0.0.2\tlocalhost"; next}1' /etc/hosts > hosts.new
+echo -e "8.8.8.8\tfacebook.com" >> hosts.new
+cat hosts.new > /etc/hosts
+rm hosts.new
