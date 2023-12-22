@@ -1,10 +1,21 @@
 # install flask from pip3.
 
-exec {'pip3 install flask':
-  require => Exec['python-installed'],
-  command => '/usr/bin/pip3 install flask==2.1.0'
+package { 'python3.8':
+  ensure => '3.8.10',
 }
 
-exec {'python-installed':
-  command => '/usr/bin/which python3'
+package { 'python-pip':
+  ensure => present,
+}
+
+package { 'flask':
+  ensure   => '2.1.0',
+  provider => 'pip',
+  require  => Package['python3-pip'],
+}
+
+package { 'werkzeug':
+  ensure   => '2.1.1',
+  provider => 'pip',
+  require  => Package['python3-pip'],
 }
