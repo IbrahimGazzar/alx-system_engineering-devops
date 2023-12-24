@@ -1,0 +1,6 @@
+# This shows the required configuration in ssh/config
+# To use the private key school and prevent password authentication
+
+Host *
+     IdentityFile ~/.ssh/school
+     PasswordAuthentication no
